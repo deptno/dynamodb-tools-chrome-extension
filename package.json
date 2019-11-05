@@ -1,0 +1,40 @@
+{
+  "name": "dynamodb-tools-chrome-extension",
+  "version": "0.0.0",
+  "description": "deflated dynamodb document property -> JSON",
+  "main": "index.js",
+  "scripts": {
+    "build.background": "rollup -c background.rollup.config.js",
+    "build.inject": "rollup -c inject.rollup.config.js",
+    "build": "npm run build.background && npm run build.inject",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deptno/refine-dynamodb.git"
+  },
+  "keywords": [
+    "dynamodb"
+  ],
+  "author": "Bonggyun Lee <deptno@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deptno/refine-dynamodb/issues"
+  },
+  "homepage": "https://github.com/deptno/refine-dynamodb#readme",
+  "dependencies": {
+    "browserify-zlib": "^0.2.0",
+    "is-base64": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.91",
+    "buffer": "^5.4.3",
+    "rollup": "^1.26.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "typescript": "^3.7.1-rc"
+  }
+}
